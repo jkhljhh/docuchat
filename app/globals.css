@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Syne', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+  --bg: #04040a;
+  --surface: #080810;
+  --elevated: #0f0f1c;
+  --border: rgba(255,255,255,0.06);
+  --amber: #fbbf24;
+  --jade: #10b981;
+  --coral: #ff6b6b;
+  --text: #f0f0e8;
+  --muted: rgba(240,240,232,0.45);
+  --faint: rgba(240,240,232,0.18);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--bg); color: var(--text); font-family: var(--font-mono); overflow-x: hidden; }
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-thumb { background: rgba(251,191,36,0.2); border-radius: 2px; }
+
+.prose p { margin-bottom: 0.9em; line-height: 1.75; color: rgba(240,240,232,0.82); font-size: 0.875rem; }
+.prose h1,.prose h2,.prose h3 { font-family: var(--font-display); color: var(--text); margin: 1.2em 0 0.4em; }
+.prose h2 { font-size: 1rem; }
+.prose h3 { font-size: 0.9rem; }
+.prose strong { color: var(--amber); }
+.prose code { background: rgba(251,191,36,0.08); color: rgba(251,191,36,0.9); padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.82em; }
+.prose pre { background: rgba(0,0,0,0.4) !important; border: 1px solid var(--border) !important; border-radius: 8px !important; padding: 1rem !important; overflow-x: auto; margin-bottom: 1em; }
+.prose pre code { background: transparent !important; color: var(--text) !important; }
+.prose ul,.prose ol { padding-left: 1.4em; margin-bottom: 0.9em; color: rgba(240,240,232,0.82); font-size: 0.875rem; }
+.prose li { margin-bottom: 0.25em; }
+.prose blockquote { border-left: 2px solid var(--amber); padding-left: 1em; color: var(--muted); font-style: italic; margin-bottom: 0.9em; }
+.prose table { width: 100%; border-collapse: collapse; margin-bottom: 1em; font-size: 0.82rem; }
+.prose th { background: rgba(251,191,36,0.08); padding: 0.5em 0.75em; text-align: left; border-bottom: 1px solid rgba(251,191,36,0.2); }
+.prose td { padding: 0.5em 0.75em; border-bottom: 1px solid var(--border); }
+
+.blink::after { content: '▋'; animation: blink 1s step-end infinite; color: var(--amber); }
+@keyframes blink { 0%,100% { opacity:1; } 50% { opacity:0; } }
+
+.status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--jade); animation: pulse-jade 2s ease-in-out infinite; }
+@keyframes pulse-jade { 0%,100% { box-shadow: 0 0 0 0 rgba(16,185,129,0.4); } 50% { box-shadow: 0 0 0 5px rgba(16,185,129,0); } }

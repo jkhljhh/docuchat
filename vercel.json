@@ -1,0 +1,8 @@
+{
+  "framework": "nextjs",
+  "functions": {
+    "app/api/upload/route.ts": { "maxDuration": 120, "memory": 1024 },
+    "app/api/chat/route.ts":   { "maxDuration": 120, "memory": 512  },
+    "app/api/mcp/route.ts":    { "maxDuration": 60,  "memory": 512  }
+  }
+}
