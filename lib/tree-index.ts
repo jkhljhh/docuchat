@@ -377,7 +377,7 @@ Order by relevance descending. Return raw JSON only.`,
     const selections: Array<{ node_id: string; relevanceScore: number; reasoning: string }> =
       JSON.parse(cleaned)
 
-    return selections
+      return selections
       .map(s => {
         const node = nodes.find(n => n.node_id === s.node_id)
         if (!node) return null
@@ -385,11 +385,12 @@ Order by relevance descending. Return raw JSON only.`,
           node,
           relevanceScore: s.relevanceScore,
           reasoning: s.reasoning,
-          pages: [],  // filled later
+          pages: [] as DocumentPage[],
           depth: 0,
-        }
+        } as TreeSearchResult
       })
       .filter((r): r is TreeSearchResult => r !== null)
+    
   } catch {
     // Fallback: return all nodes with equal scores
     return nodes.slice(0, maxSelect).map(node => ({
