@@ -8,31 +8,32 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "14.2.5",
-    "react": "^18",
-    "react-dom": "^18",
-    "openai": "^4.52.7",
-    "pdf-parse": "^1.1.1",
-    "mammoth": "^1.8.0",
+    "clsx": "^2.1.1",
     "framer-motion": "^11.3.8",
     "lucide-react": "^0.408.0",
+    "mammoth": "^1.8.0",
+    "next": "14.2.5",
+    "openai": "^4.52.7",
+    "pdf-parse": "^1.1.1",
+    "react": "^18",
+    "react-dom": "^18",
     "react-dropzone": "^14.2.3",
     "react-markdown": "^9.0.1",
     "remark-gfm": "^4.0.0",
-    "clsx": "^2.1.1",
-    "tailwind-merge": "^2.4.0",
     "sonner": "^1.5.0",
-    "uuid": "^10.0.0"
+    "tailwind-merge": "^2.4.0",
+    "uuid": "^10.0.0",
+    "vercel": "^50.25.6"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
+    "@types/pdf-parse": "^1.1.4",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "@types/pdf-parse": "^1.1.4",
     "@types/uuid": "^10.0.0",
+    "autoprefixer": "^10.0.1",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "autoprefixer": "^10.0.1"
+    "typescript": "^5"
   }
 }

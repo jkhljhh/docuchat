@@ -105,7 +105,7 @@ ${context}`
       headers: {
         'Content-Type': 'text/event-stream',
         'Cache-Control': 'no-cache',
-        'X-Used-Pages': JSON.stringify([...new Set(usedPages)].sort((a, b) => a - b)),
+        'X-Used-Pages': JSON.stringify(Array.from(new Set(usedPages)).sort((a, b) => a - b)),
         'X-Used-Nodes': JSON.stringify(usedNodes),
       },
     })
