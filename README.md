@@ -64,3 +64,4 @@ Streaming answer with section + page citations
 ## Credits
 
 Algorithm inspired by [VectifyAI/PageIndex](https://github.com/VectifyAI/PageIndex) (MIT License, 11.6k ⭐)
+# docuchat
