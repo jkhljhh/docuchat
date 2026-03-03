@@ -158,8 +158,8 @@ export default function Page() {
 
       historyRef.current = [
         ...historyRef.current,
-        { role: 'user', content: q },
-        { role: 'assistant', content: full },
+        { role: 'user'as const, content: q },
+        { role: 'assistant'as const, content: full },
       ].slice(-12)
 
     } catch (e) {
