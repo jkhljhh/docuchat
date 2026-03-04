@@ -4,6 +4,12 @@ import { buildTreeIndex } from '@/lib/tree-index'
 
 export const runtime = 'nodejs'
 export const maxDuration = 120
+export const config = {
+  api: {
+    bodyParser: false,
+    sizeLimit: '10mb'
+  }
+}
 
 export async function POST(req: NextRequest) {
   try {
